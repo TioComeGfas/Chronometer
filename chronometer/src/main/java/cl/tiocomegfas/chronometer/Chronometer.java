@@ -6,7 +6,7 @@ public class Chronometer {
      * Carga de la libreria en C++
      */
     static {
-        System.loadLibrary("cronometer-lib");
+        System.loadLibrary("chronometer-lib");
     }
 
     private static final Chronometer API = new Chronometer();
@@ -79,8 +79,8 @@ public class Chronometer {
         this.wtime1 = wtime1;
     }
 
-    public native void startClock(Chronometer cronometerAPI);
+    public static native void startClock(Chronometer chronometerAPI);
 
-    public native double stopClock(Chronometer cronometerAPI);
+    public static native double stopClock(Chronometer chronometerAPI);
 
 }
