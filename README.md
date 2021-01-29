@@ -1,6 +1,3 @@
-[![](https://jitpack.io/v/TioComeGfas/Chronometer.svg)](https://jitpack.io/#TioComeGfas/Chronometer)
-
-
 Esta pequeña libreria tiene por objetivo ayudar a obtener los tiempos de ejecución reales considerando las rafagas del procesador al ejecutar el proceso.
 
 ## Como usar
@@ -47,10 +44,14 @@ allprojects {
     }
 }
 ```
+
 - Paso 2. Agrega la dependencia
+
+[![](https://jitpack.io/v/TioComeGfas/Chronometer.svg)](https://jitpack.io/#TioComeGfas/Chronometer)
+
 ```Gradle
 dependencies {
-   implementation 'com.github.TioComeGfas:Chronometer:Tag'
+   implementation 'com.github.TioComeGfas:Chronometer:1.0.1'
 }
 ```
 
