@@ -1,39 +1,34 @@
 [![](https://jitpack.io/v/TioComeGfas/Chronometer.svg)](https://jitpack.io/#TioComeGfas/Chronometer)
 
-Esta pequeña libreria tiene por objetivo ayudar a obtener los tiempos de ejecución reales considerando las rafagas del procesador al ejecutar el proceso.
+Si necesitas obtener el tiempo real que consume un algoritmo o acción dentro de tu aplicación, con esta libreria puedes obtenerlos.
 
-## Como usar
+## WIKI
 
 A continuación se presentará a la forma de utilizar esta libreria:
 
-- Inicializar libreria:
-```Java
-//Obtiene una instancia del objeto Chronometer y deja todo
-//preparado para ser utilizado
-Chronometer cronometro = Chronometer.getInstance();
+- How to use (Kotlin):
+```Kotlin
+//Obtiene una instancia del objeto Chronometer y deja todo preparado para ser utilizado
+val chronometer: Chronometer = Chronometer()
+chronometer.startClock()
+
+... 
+
+val time = chronometer.stopClock()
+Log.d(javaClass::getName.toString(), "time: $time")
+```
+- How to use (Java):
+```Kotlin
+//Obtiene una instancia del objeto Chronometer y deja todo preparado para ser utilizado
+Chronometer chronometer = new Chronometer();
+chronometer.startClock();
+
+... 
+
+double time = chronometer.stopClock();
+Log.d(getName.toString(), "time: "+ time);
 ```
 
-- Comenzar reloj:
-```Java
-/**
-* Metodo estatico de la clase cl.tiocomegfas.chronometer.Chronometer que tiene por
-* objetivo, iniciar el cronometro.
-* @param cronometro: Objeto que almacena el cronometro y es creado con anterioridad
-* @return void
-*/
-Chronometro.startClock(cronometro);
-```
-
-- Terminar reloj:
-```Java
-/**
-* Metodo estatico de la clase cl.tiocomegfas.chronometer.Chronometer que tiene por
-* objetivo, detener el cronometro, entregando el tiempo transcurrido.
-* @param cronometro: Objeto que almacena el cronometro y es creado con anterioridad.
-* @return double: tiempo transcurrido en segundos.
-*/
-Chronometro.stopClock(cronometro);
-```
 
 ## Instalación
 
@@ -51,20 +46,20 @@ allprojects {
 
 ```Gradle
 dependencies {
-   implementation 'com.github.TioComeGfas:Chronometer:1.0.1'
+   implementation 'com.github.TioComeGfas:Chronometer:1.1'
 }
 ```
 
 ## Requisitos
 - SDK MIN: API 21
-- SDK MAX: API 30
+- SDK MAX: API 31
 
 ## Licencia
 - El codigo fuente de C++ fue creado por el DR. Miguel Romero, yo solo exporte su libreria para que corriera en Android.
 
       MIT License
 
-      Copyright (c) 2021 Fredy Moncada
+      Copyright (c) 2021 TioComeGfas
 
       Permission is hereby granted, free of charge, to any person obtaining a copy
       of this software and associated documentation files (the "Software"), to deal
